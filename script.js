@@ -1,12 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() 
+{
 
-    // Menu
-    document.querySelector('.hamburger').addEventListener('click', function() {
+    // Responsive 'hamburger' menu
+    document.querySelector('.hamburger').addEventListener('click', function() 
+    {
         const navbar = document.getElementById('navbar');
-        if (navbar.style.display === 'block') {
+        if (navbar.style.display === 'block') 
+        {
             navbar.style.display = 'none';
         }
-        else {
+        else 
+        {
             navbar.style.display = 'block';
         }
     });
@@ -15,8 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('#navbar a');
     const currentUrl = window.location.pathname.split('/').pop();
 
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentUrl) {
+    links.forEach(link => 
+    {
+        if (link.getAttribute('href') === currentUrl) 
+        {
             link.classList.add('active');
         }
     });
@@ -24,14 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Rotating image animation
     const image = document.getElementById('spinnableImage');
 
-    image.addEventListener('click', function() {
+    image.addEventListener('click', function() 
+    {
         this.classList.toggle('rotate');
     });
 
     // Easter-egg event for changing background
     let h2 = document.getElementById('easter-egg1')
 
-    h2.addEventListener('click', function(){
+    h2.addEventListener('click', function()
+    {
         document.body.style.backgroundImage = "url('pictures/easteregg1.jpg')";
         document.body.style.backgroundSize = 'cover'
         document.body.style.backgroundPosition = 'center'
@@ -41,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let keyboardType = '';
     const easterEggCode = '1337';
 
-    document.addEventListener('keyup', (keyboardEvent) => {
+    document.addEventListener('keyup', (keyboardEvent) => 
+    {
         keyboardType += keyboardEvent.key;
         if (keyboardType.includes(easterEggCode)) 
         {
